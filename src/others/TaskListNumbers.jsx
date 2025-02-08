@@ -2,20 +2,22 @@ import React from "react";
 
 const TaskListNumbers = () => {
   return (
-    <div>
-      <div className="grid grid-cols-4 gap-8 pt-10 px-[60px] justify-items-center">
-        <div className="bg-red-400 h-[110px] w-[85%] rounded-2xl text-white ">
-          1
-        </div>
-        <div className="bg-blue-400 h-[110px] w-[85%] rounded-2xl text-white ">
-          2
-        </div>
-        <div className="bg-green-400 h-[110px] w-[85%] rounded-2xl text-white">
-          3
-        </div>
-        <div className="bg-yellow-400 h-[110px] w-[85%] rounded-2xl text-white ">
-          4
-        </div>
+    <div className="flex justify-between gap-5 screen px-5 py-9">
+      <div className="h-40 w-[45%] bg-red-400 rounded-2xl py-6 px-9">
+        <h2 className="text-3xl font-semibold">0</h2>
+        <h3 className="text-xl font-medium">New Task</h3>
+      </div>
+      <div className="h-40 w-[45%] bg-blue-400 rounded-2xl py-6 px-9">
+        <h2 className="text-3xl font-semibold">0</h2>
+        <h3 className="text-xl font-medium">New Task</h3>
+      </div>
+      <div className="h-40 w-[45%] bg-green-400 rounded-2xl py-6 px-9">
+        <h2 className="text-3xl font-semibold">0</h2>
+        <h3 className="text-xl font-medium">New Task</h3>
+      </div>
+      <div className="h-40 w-[45%] bg-yellow-400 rounded-2xl py-6 px-9">
+        <h2 className="text-3xl font-semibold">0</h2>
+        <h3 className="text-xl font-medium">New Task</h3>
       </div>
     </div>
   );

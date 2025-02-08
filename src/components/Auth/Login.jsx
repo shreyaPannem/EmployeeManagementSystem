@@ -1,50 +1,62 @@
 import React, { useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(email);
     console.log(password);
-    console.log("form submitted");
     setEmail("");
     setPassword("");
   };
+
   return (
-    <div className="flex justify-center items-center h-screen w-screen">
-      <div className="border-2 border-emerald-600 rounded-[45px] h-100 w-100 flex justify-center items-center">
+    <div className="flex items-center justify-center border h-screen w-screen border-amber-600">
+      <div className="">
         <form
           onSubmit={(e) => {
             submitHandler(e);
           }}
-          className="flex flex-col h-50 w-80  items-center justify-center gap-1.5"
+          className=" flex flex-col border border-amber-400 p-7 rounded-2xl w-90 h-80 gap-3"
         >
+          <h2 className="font-semibold text-xl  text-center">Login</h2>
           <input
-            type="email"
-            value={email}
             onChange={(e) => {
-              console.log(e.target.value);
               setEmail(e.target.value);
             }}
+            value={email}
+            type="email"
             placeholder="Enter your email"
-            className="w-full placeholder:text-l px-5 py-2 rounded-full text-white font-bold outline-none border border-emerald-600"
+            className="w-full  focus:ring-1 focus:ring-amber-400 p-2 outline-none rounded-xl mb-2 bg-gray-700"
             required
           />
+
           <input
-            type="password"
             value={password}
             onChange={(e) => {
-              console.log(e.target.value);
               setPassword(e.target.value);
             }}
+            type="password"
             placeholder="Enter your password"
-            className="w-full mt-3 placeholder:text-l px-5 py-2 rounded-full text-white font-bold outline-none border border-emerald-600"
+            className="w-full  focus:ring-1 focus:ring-amber-400 p-2 outline-none rounded-xl mb-2 bg-gray-700"
             required
           />
-          <button className="mt-4 bg-emerald-600 w-33 p-3  font-semibold text-xl rounded-full outline-none">
-            Login
-          </button>
+
+          <div className="flex items-center justify-baseline">
+            <input type="checkbox" name="" id="" className="h-4 w-5" />
+            Remember me
+            <a href="#" className="hover:underline  ml-15">
+              Forgot Password
+            </a>
+          </div>
+
+          <input
+            type="submit"
+            value="Login"
+            className="w-full bg-amber-500 p-3 font-bold mt-4 rounded-xl text-white hover:bg-amber-400"
+          />
+          {/* <button className="w-full bg-amber-500 p-3 font-bold mt-4 rounded-xl text-white hover:bg-amber-400">Login</button> */}
         </form>
       </div>
     </div>
